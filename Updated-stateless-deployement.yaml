@@ -12,14 +12,15 @@ spec:
     metadata:
       labels:
         app: stateless-nginx
-  spec:
-  containers:
-  - name: nginx
-    image: nginx:latest
-    ports:
-    - containerPort: 80
-    env:
-    - name: REDIS_HOST
-      value: "stateful-redis-service"
-    - name: REDIS_PORT
-      value: "6379"
+    spec:
+     containers:
+     - name: nginx
+       image: nginx:latest
+       ports:
+       - containerPort: 80
+       env:
+       - name: REDIS_HOST
+         value: "stateful-redis-service"
+       - name: REDIS_PORT
+         value: "6379"
+
